@@ -1,7 +1,14 @@
 {
   "name": "testing-vue",
+  "description": "Repo for Vuejs tests with Vitest and Typescript",
+  "author": "Alan Cleyton <alancleyton67@gmail.com>",
+  "repository": "git@github.com:alancleyton/testing-vue.git",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
