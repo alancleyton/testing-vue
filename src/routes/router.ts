@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 import HomeView from '@/views/HomeView.vue';
 import TodoView from '@/views/TodoView.vue';
+import PostView from '@/views/PostView.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -13,6 +14,11 @@ const routes: RouteRecordRaw[] = [
     name: 'todos',
     path: '/todos',
     component: TodoView,
+  },
+  {
+    name: 'posts',
+    path: '/posts',
+    component: PostView,
   },
 ];
 
