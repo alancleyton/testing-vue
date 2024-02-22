@@ -1,20 +1,17 @@
-import path from 'path';
+import { fileURLToPath, URL } from 'node:url';
 
 import { defineConfig } from 'vitest/config';
 import VuePlugin from '@vitejs/plugin-vue';
 
-function _resolve(dir: string) {
-  return path.resolve(__dirname, dir);
-}
-
 export default defineConfig({
   plugins: [VuePlugin()],
   test: {
-    environment: 'happy-dom',
+    globals: true,
+    environment: 'jsdom',
   },
   resolve: {
     alias: {
-      '@': _resolve('src'),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 });
