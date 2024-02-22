@@ -6,8 +6,8 @@ import LoadingSpinner from '@/components/LoadingSpinner.vue';
 
 const { getTodos, todos, isLoading } = useTodos();
 
-onMounted(() => {
-  getTodos();
+onMounted(async () => {
+  await getTodos();
 });
 </script>
 
